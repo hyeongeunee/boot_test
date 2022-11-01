@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}파일업로드{% endblock %}
+{% block content %}
+<br>
+<h1 class="text-center mb-4">파일 업로드</h1>
+<div class="container">
+    <form action="/fileupload" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp">
+            <div id="titleHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea class="form-control" id="content" name="content" rows="18"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Small file input example</label>
+            <input class="form-control form-control-sm" id="formFileSm" name="up_file" type="file">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

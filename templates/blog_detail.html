@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Blog Detail{% endblock %}
+{% block content %}
+<br>
+<div class="container">
+    <h1 class="text-center mb-5">Blog Detail</h1>
+
+    <div class="text-end mb-3">
+        <a type="button" class="btn btn-outline-warning" href="/blogupdate/{{data.id}}" role="button">수정</a>
+        <a type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">삭제</a>
+    </div>
+
+    <div class="card mb-3">
+        <img src="/static/upload/{{data.img_path}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{data.title}}</h5>
+            <p class="card-text">{{data.content}}.</p>
+            <p class="card-text"><small class="text-muted">{{data.date}}</small></p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">삭제</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                해당 글을 삭제하시겠습니까?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <a type="button" class="btn btn-primary" href="/blogdelete/{{data.id}}" role="button">Yes</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

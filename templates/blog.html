@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Blog{% endblock %}
+{% block content %}
+    <!-- 본문 start-->
+    <br />
+    <div class="container">
+        <div class="card mb-3 border-dark">
+            <img src="static/img/img01.png" class="card-img-top" alt="...">
+            <div class="card-body text-secondary">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+            <img src="static/img/img02.png" class="card-img-bottom" alt="..."> 
+            <!-- bottom 은 사진 아래 top은 위 -->
+        </div>
+        <div class="card mb-3">
+            <img src="static/img/img03.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    <!-- 본문 end -->
+{% endblock %}
